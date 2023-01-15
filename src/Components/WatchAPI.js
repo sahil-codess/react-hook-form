@@ -14,7 +14,7 @@ export default function App() {
     console.log(data)
   }
 
-  console.log(watch('firstName'))
+  console.log(watch())
 
   return (
     <div>
