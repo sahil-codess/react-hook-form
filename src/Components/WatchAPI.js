@@ -4,21 +4,25 @@ import { useForm } from "react-hook-form";
 export default function App() {
   const { register, handleSubmit, watch } = useForm({
     defaultValues: {
-        firstName: 'Qais',
-        lastName: 'Erfan',
-        age: '23'
+        firstName: '',
+        lastName: '',
+        age: 0
     }
   });
 
-  const onSubmit = data => {
-    console.log(data)
-  }
+    React.useEffect(() => {
+        const subscription = watch((data) =>{
+            console.log(data);
+        })
 
-  console.log(watch())
+        return () => {
+            subscription.unsubscribe();
+        }
+    }, [watch])
 
   return (
     <div>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit((data) => console.log(data))}>
           <input {...register('firstName')} placeholder="First name" />
           <input {...register('lastName')} placeholder="Last name" />
           <input type="number" {...register("age")} placeholder="Age" />
