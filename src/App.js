@@ -1,11 +1,11 @@
 import './App.css';
-import { HandleError } from './Components/HandleError';
+import Register from './Components/Register'
 
 
 function App() {
   return (
     <div className="App">
-    <HandleError />
+      <Register />
     </div>
   );
 }
