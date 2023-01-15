@@ -1,10 +1,10 @@
 import './App.css';
-import UserForm from './UserForm'
+import { RegisterHook } from './Components/RegisterHook';
 
 function App() {
   return (
     <div className="App">
-      <UserForm />
+      <RegisterHook />
     </div>
   );
 }
