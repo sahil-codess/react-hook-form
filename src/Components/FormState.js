@@ -2,7 +2,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, formState:{isValid}} = useForm({
+  const { register, handleSubmit, formState:{isSubmitted}} = useForm({
     defaultValues: {
         mode: 'onChange',
         firstName: '',
@@ -11,7 +11,7 @@ export default function App() {
     }
   });
 
-  console.log("isValid", isValid)
+  console.log("isSubmitted", isSubmitted)
 
   return (
     <div>
