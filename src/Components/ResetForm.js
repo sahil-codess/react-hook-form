@@ -21,7 +21,7 @@ export default function App() {
             reset({
                 firstName: 'Qais',
                 lastName: "Erfan",
-            },{ keepDefaultValues: true});
+            }, { keepValues: true});
           }}>Reset</button>
           <input type="submit" />
         </form>
