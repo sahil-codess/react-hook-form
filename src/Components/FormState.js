@@ -2,15 +2,16 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, formState:{submitCount}} = useForm({
+  const { register, handleSubmit, formState:{isValid}} = useForm({
     defaultValues: {
+        mode: 'onChange',
         firstName: '',
         lastName: '',
         age: 0
     }
   });
 
-  console.log("submitCount", submitCount)
+  console.log("isValid", isValid)
 
   return (
     <div>
