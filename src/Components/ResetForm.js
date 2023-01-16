@@ -2,7 +2,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, control, reset, formState: {isDirty}} = useForm({
+  const { register, handleSubmit, control, reset, formState ,formState: {isDirty, isSubmitSuccessful}} = useForm({
     defaultValues: {
         firstName: '',
         lastName: ''
@@ -10,6 +10,15 @@ export default function App() {
   });
 
   console.log("isDirty", isDirty)
+
+  React.useEffect(() =>{
+    if (formState.isSubmitSuccessful) {
+        reset({
+            firstName: 'Qais',
+            lastName: 'Erfan'
+        })
+    }
+  }, [formState, reset])
 
   return (
     <div>
