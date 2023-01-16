@@ -1,13 +1,10 @@
 import './App.css';
-import Register from './Components/Register'
-import WatchAPI from './Components/WatchAPI'
-
+import FormState from './Components/FormState'
 
 function App() {
   return (
     <div className="App">
-      {/* <Register /> */}
-      <WatchAPI />
+      <FormState />
     </div>
   );
 }
