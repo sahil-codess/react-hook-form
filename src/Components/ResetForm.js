@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 export default function App() {
   const { register, handleSubmit, control, reset} = useForm({
     defaultValues: {
-        mode: 'onChange',
         firstName: '',
         lastName: ''
     }
@@ -14,10 +13,13 @@ export default function App() {
     <div>
         <form onSubmit={handleSubmit((data) => console.log(data))}>
           <input {...register("firstName")}  placeholder="First name" />
-          <input control={control} placeholder="Last name" />
+          <input control={control} name={"lastName"} />
 
           <button type="button" onClick={() => {
-            reset();
+            reset({
+                firstName: 'Qais',
+                lastName: "Erfan",
+            });
           }}>Reset</button>
           <input type="submit" />
         </form>
