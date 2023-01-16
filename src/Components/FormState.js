@@ -2,7 +2,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, formState:{isSubmitSuccessful}} = useForm({
+  const { register, handleSubmit, formState:{submitCount}} = useForm({
     defaultValues: {
         firstName: '',
         lastName: '',
@@ -10,7 +10,7 @@ export default function App() {
     }
   });
 
-  console.log("isSubmitSuccessful", isSubmitSuccessful)
+  console.log("submitCount", submitCount)
 
   return (
     <div>
