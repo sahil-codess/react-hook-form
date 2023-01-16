@@ -1,10 +1,10 @@
 import './App.css';
-import FormState from './Components/FormState'
+import ResetForm from './Components/ResetForm'
 
 function App() {
   return (
     <div className="App">
-      <FormState />
+      <ResetForm />
     </div>
   );
 }
