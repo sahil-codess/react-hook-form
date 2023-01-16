@@ -2,12 +2,14 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, control, reset} = useForm({
+  const { register, handleSubmit, control, reset, formState: {isDirty}} = useForm({
     defaultValues: {
         firstName: '',
         lastName: ''
     }
   });
+
+  console.log("isDirty", isDirty)
 
   return (
     <div>
@@ -19,7 +21,7 @@ export default function App() {
             reset({
                 firstName: 'Qais',
                 lastName: "Erfan",
-            });
+            },{ keepDefaultValues: true});
           }}>Reset</button>
           <input type="submit" />
         </form>
