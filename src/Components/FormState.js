@@ -2,7 +2,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, formState:{dirtyFields}} = useForm({
+  const { register, handleSubmit, formState:{touchedFields}} = useForm({
     defaultValues: {
         firstName: '',
         lastName: '',
@@ -10,7 +10,7 @@ export default function App() {
     }
   });
 
-  console.log("dirtyFields", dirtyFields)
+  console.log("touchedFields", touchedFields)
 
   return (
     <div>
