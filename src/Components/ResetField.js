@@ -2,14 +2,14 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, resetField ,formState:{isDirty, dirtyFields}} = useForm({
+  const { register, handleSubmit, resetField ,formState:{touchedFields}} = useForm({
     defaultValues: {
         firstName: '',
     },
     mode: "onChange"
   });
 
-  console.log("isDirty, dirtyFields", isDirty, dirtyFields)
+  console.log("touchedFields", touchedFields)
   return (
     <div>
         <form onSubmit={handleSubmit((data) => console.log(data))}>
