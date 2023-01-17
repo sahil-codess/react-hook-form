@@ -16,9 +16,10 @@ export default function App() {
     <div>
         <form onSubmit={handleSubmit((data) => console.log(data))}>
           <input {...register('firstName',{required: true, minLength: 4})} placeholder="First name" />
+          <input {...register('lastName',{required: true, minLength: 4})} placeholder="Last name" />
 
           <button onClick={() => {
-            trigger("firstName")
+            trigger(['firstName', 'lastName'])
           }}>Trigger</button>
           <input type="submit" />
         </form>
