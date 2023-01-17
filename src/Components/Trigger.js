@@ -19,7 +19,7 @@ export default function App() {
           <input {...register('lastName',{required: true, minLength: 4})} placeholder="Last name" />
 
           <button onClick={() => {
-            trigger()
+            trigger("firstName", { shouldFocus: true})
           }}>Trigger</button>
           <input type="submit" />
         </form>
