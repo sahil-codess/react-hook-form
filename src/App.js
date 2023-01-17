@@ -1,10 +1,10 @@
 import './App.css';
-import ResetForm from './Components/ResetForm'
+import Trigger from './Components/Trigger'
 
 function App() {
   return (
     <div className="App">
-      <ResetForm />
+      <Trigger />
     </div>
   );
 }
