@@ -1,10 +1,10 @@
 import './App.css';
-import Trigger from './Components/Trigger'
+import SetError from './Components/SetError'
 
 function App() {
   return (
     <div className="App">
-      <Trigger />
+      <SetError />
     </div>
   );
 }
