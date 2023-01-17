@@ -1,10 +1,10 @@
 import './App.css';
-import SetError from './Components/SetError'
+import ResetFeild from './Components/ResetField'
 
 function App() {
   return (
     <div className="App">
-      <SetError />
+     <ResetFeild />
     </div>
   );
 }
