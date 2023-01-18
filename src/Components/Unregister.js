@@ -11,9 +11,11 @@ export default function App() {
 
   const checkbox = watch('checkbox')
 
+  console.log(errors)
+
   React.useEffect(() => {
     if(!checkbox) {
-      unregister("firstName")
+      unregister("firstName", { keepError: true})
     }
   }, [unregister, checkbox])
 
