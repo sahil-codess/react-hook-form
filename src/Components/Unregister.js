@@ -2,15 +2,20 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, watch , formState:{ errors}} = useForm({
+  const { register, handleSubmit, watch , unregister , formState:{ errors}} = useForm({
     defaultValues: {
         firstName: '',
         checkbox: true
     },
-    shouldUnregister: true
   });
 
   const checkbox = watch('checkbox')
+
+  React.useEffect(() => {
+    if(!checkbox) {
+      unregister("firstName")
+    }
+  }, [unregister, checkbox])
 
   console.log("checkbox", checkbox)
   return (
