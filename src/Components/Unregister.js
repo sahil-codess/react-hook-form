@@ -6,7 +6,8 @@ export default function App() {
     defaultValues: {
         firstName: '',
         checkbox: true
-    }
+    },
+    shouldUnregister: true
   });
 
   const checkbox = watch('checkbox')
